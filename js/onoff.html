@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>on off</title>
+<script type="text/javascript">
+	function tentukanOnOff()
+		{
+		if (form_onoff.button_onoff.value=="Off")
+		{
+			form_onoff.button_onoff.value = "On";
+			document.bgColor="white";
+		}else{
+			form_onoff.button_onoff.value ="Off";
+			document.bgColor="black";
+		}
+}
+</script>
+</head>
+<body>
+	<form name="form_onoff">
+		<input type="button" name="button_onoff"
+		 value="Off" 
+		 onclick="tentukanOnOff ();" />
+	</form>
+		 
+</body>
+</html>

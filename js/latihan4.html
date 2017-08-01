@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head><title>Waktu</title>
+<script type="text/javascript">
+		function waktu_waktu()
+		{
+			var waktu = new Date();
+			var jam = waktu.getHours();
+			var menit = waktu.getMinutes();
+			var detik = waktu.getSeconds();
+
+			document.write("Pukul " + jam +" menit ke " + menit + " detik ke " + detik);
+
+		}
+</script></head>
+<body onload="waktu_waktu();">
+</body>
+</html>

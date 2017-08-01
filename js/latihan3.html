@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Bilangan ganjil</title>
+<script type="text/javascript">
+	function bilanganGanjil()
+	{
+		var masukan;
+		var hasil;
+		masukan = parseInt(document.form_masukan.text_masukan.value);
+		if(isNaN(masukan))
+		{
+			alert("Masukan angka yang valid");
+			form_masukan.text_masukan.focus();
+			return;
+		}
+
+		var i;
+		for(i=1; i<= masukan; i++)
+		{
+			if(i%2 != 0){
+				hasil = document.write(i + "<br />");
+			}
+		}
+
+		var div_hasil = document.getElementById("id_masukan");
+		div_hasil.innerHTML = hasil;
+	}
+</script>
+</head>
+<body>
+	<form name="form_masukan">
+		Input Angka:
+		<input type="text" name="text_masukan" />
+		<input type="button" name="button_proses"
+			value="Proses Nilai"
+			onclick="bilanganGanjil();" />
+	</form>
+	<div id="id_masukan" style="front-family">
+	</div>
+</body>
+</html>

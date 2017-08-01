@@ -1,0 +1,5 @@
+Keterangan ini tersimpan pada sebuah file di server.
+Bila kamu menjumpai tulisan ini,
+aplikasi web berbasis ajax
+yang kamu buat sudah bekerja dengan baik.
+Selamat , ya!!

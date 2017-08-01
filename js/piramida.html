@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Piramida</title>
+<script type="text/javascript">
+
+	function bentukPiramida ()
+	{
+		var tinggi;
+		tinggi = parseInt(document.form_piramida.text_tinggi.value);
+		if (isNaN(tinggi) || tinggi < 3)
+		{
+			alert("Masukan bilangan bulat > 2 untuk tinggi");
+			form_piramida.text_tinggi.focus();
+			return;
+		}
+
+		//bentuk piramida
+		var baris, kolom;
+		var hasil = "";
+		for (baris = 1; baris <= tinggi; baris++)
+		{
+			//tambahkan karakter spasi
+			for (kolom = 1; kolom <= (tinggi-baris); kolom++)
+				hasil = hasil + "&nbsp;";
+
+			// buat bintang
+			for (kolom = 1; kolom <= 2 * baris -1/2; kolom++)
+				hasil = hasil +"*";
+			//pindah baris
+			hasil = hasil + "</br>";
+		}
+
+		var div_hasil = document.getElementById("id_piramida");
+		div_hasil.innerHTML = hasil;
+	}
+</script>
+</head>
+<body>
+	<form name="form_piramida">
+		Tinggi:
+		<input type="text" name="text_tinggi" />
+		<input type="button" name="button_bentuk" 
+				value="Bentuk Piramida"
+				onclick= "bentukPiramida ();" />
+	</form>
+	<div id="id_piramida" style="front-family: courier">
+	</div>
+</body>
+</html>

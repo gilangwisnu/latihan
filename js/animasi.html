@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head><title>Animasi</title>
+	<script type="text/javascript">
+		var teks = "SELAMAT BELAJAR javascript";
+		var counter = 0;
+		var id_interval;
+
+		function prosesAnimasi()
+		{
+			var st;
+			st = teks.substr(0, counter+1);
+			if (counter == teks.length)
+				counter = 0;
+				else 
+					counter++;
+
+				var div_info = document.getElementById("id_info");
+				div_info.innerHTML = st;
+		}
+
+	</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="Memulai Animasi"
+		onclick="id_interval = setInterval(prosesAnimasi,100)" />
+
+		<input type="button" value="Menghentikan Animasi"
+		onclick ="clearInterval(id_interval)" />
+	</form>	
+	<div id="id_info"></div>
+</body>
+</html>
